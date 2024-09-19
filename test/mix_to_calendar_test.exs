@@ -17,7 +17,7 @@ defmodule MixToCalendarTest do
         all_day: false
       }
 
-      expected_url = "https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent&location=123%20Elixir%20St,%20London&body=Join%20us%20for%20an%20amazing%20conference%20on%20Elixir%20programming!%0A%0Ahttps://www.example.com&subject=Elixir%20Conference&startdt=2024-09-19T10:00:00Z&enddt=2024-09-19T11:00:00Z&allday=false"
+      expected_url = "https://www.google.com/calendar/render?action=TEMPLATE&location=123%20Elixir%20St,%20London&text=Elixir%20Conference&details=Join%20us%20for%20an%20amazing%20conference%20on%20Elixir%20programming!%0A%0Ahttps://www.example.com&dates=2024-09-19T1000/2024-09-19T1100&ctz=Europe/London"
 
       assert URLs.google_url(calendar_event) == expected_url
     end
