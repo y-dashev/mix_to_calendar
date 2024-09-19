@@ -17,7 +17,7 @@ defmodule MixToCalendarTest do
         all_day: false
       }
 
-      expected_url = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Elixir+Conference&dates=20240919T100000/20240919T110000&details=Join+us+for+an+amazing+conference+on+Elixir+programming%21+https%3A%2F%2Fwww.example.com&location=123+Elixir+St%2C+London&ctz=Europe%2FLondon"
+      expected_url = "https://www.google.com/calendar/render?action=TEMPLATE&ctz=Europe/London&dates=2024-09-19T1000/2024-09-19T1100&details=Join%20us%20for%20an%20amazing%20conference%20on%20Elixir%20programming!%0A%0Ahttps://www.example.com&location=123%20Elixir%20St,%20London&text=Elixir%20Conference"
 
       assert URLs.google_url(calendar_event) == expected_url
     end
@@ -37,7 +37,7 @@ defmodule MixToCalendarTest do
         all_day: false
       }
 
-      expected_url = "https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&subject=Elixir+Conference&startdt=2024-09-19T10:00:00&enddt=2024-09-19T11:00:00&body=Join+us+for+an+amazing+conference+on+Elixir+programming%21+https%3A%2F%2Fwww.example.com&location=123+Elixir+St%2C+London"
+      expected_url = "https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent&allday=false&body=Join%20us%20for%20an%20amazing%20conference%20on%20Elixir%20programming!%0A%0Ahttps://www.example.com&enddt=2024-09-19T11:00:00Z&location=123%20Elixir%20St,%20London&startdt=2024-09-19T10:00:00Z&subject=Elixir%20Conference"
 
       assert URLs.outlook_com_url(calendar_event) == expected_url
     end
