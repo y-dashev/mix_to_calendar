@@ -53,11 +53,8 @@ defmodule MixToCalendar.Sample do
       all_day: all_day
     }
 
-    google_url = URLs.google_url(calendar_event)
+    yahoo_url = URLs.yahoo_url(calendar_event)
 
-    IO.puts("Yahoo Calendar URL: #{google_url}")
+    IO.puts("Yahoo Calendar URL: #{yahoo_url}")
   end
 end
-
-# Example function
-# MixToCalendar.Sample.generate_google_url()
