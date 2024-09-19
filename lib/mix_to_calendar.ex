@@ -1,18 +1,23 @@
 defmodule MixToCalendar do
+  alias MixToCalendar.Sample
+
   @moduledoc """
   Documentation for `MixToCalendar`.
   """
 
   @doc """
-  Hello world.
+  Google URL
 
   ## Examples
 
-      iex> MixToCalendar.hello()
-      :world
+      iex> MixToCalendar.google_url()
 
   """
-  def hello do
-    :world
+  def google_url do
+    MixToCalendar.Sample.generate_google_url()
+  end
+
+  def yahoo_url do
+    MixToCalendar.Sample.generate_yahoo_url()
   end
 end
