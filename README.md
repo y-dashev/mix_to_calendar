@@ -1,6 +1,9 @@
 # mix_to_calendar
  Generating calendar URLs with elxir.
 
+# Add to you deps:
+ ``` {:mix_to_calendar, "~> 0.0.1"} ```
+
 # How to use 
  MixToCalendar.Sample.generate_google_url()
 
